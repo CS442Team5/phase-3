@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:ems="10"
+            android:id="@+id/eventManualName"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/textView"
+            android:layout_toEndOf="@+id/textView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Event Name"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat"
+            android:id="@+id/repeatManual"
+            android:checked="false"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="M"
+            android:id="@+id/monday"
+            android:layout_marginTop="34dp"
+            android:checked="false"
+            android:layout_below="@+id/textView4"
+            android:layout_toLeftOf="@+id/tuesday"
+            android:layout_toStartOf="@+id/tuesday" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Days"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/repeatManual"
+            android:layout_toRightOf="@+id/monday"
+            android:layout_toEndOf="@+id/monday"
+            android:layout_marginTop="23dp" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="T"
+            android:id="@+id/tuesday"
+            android:checked="false"
+            android:layout_alignTop="@+id/monday"
+            android:layout_toLeftOf="@+id/wednesday"
+            android:layout_toStartOf="@+id/wednesday" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="W"
+            android:id="@+id/wednesday"
+            android:checked="false"
+            android:layout_alignTop="@+id/tuesday"
+            android:layout_toLeftOf="@+id/thursday"
+            android:layout_toStartOf="@+id/thursday" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Th"
+            android:id="@+id/thursday"
+            android:checked="false"
+            android:layout_alignTop="@+id/wednesday"
+            android:layout_toLeftOf="@+id/friday"
+            android:layout_toStartOf="@+id/friday" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:id="@+id/friday"
+            android:checked="false"
+            android:layout_alignTop="@+id/thursday"
+            android:layout_toLeftOf="@+id/saturday"
+            android:layout_toStartOf="@+id/saturday" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="S"
+            android:id="@+id/saturday"
+            android:checked="false"
+            android:layout_alignTop="@+id/friday"
+            android:layout_alignRight="@+id/eventManualName"
+            android:layout_alignEnd="@+id/eventManualName" />
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sn"
+            android:id="@+id/sunday"
+            android:checked="false"
+            android:layout_alignTop="@+id/monday"
+            android:layout_toLeftOf="@+id/monday"
+            android:layout_toStartOf="@+id/monday" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/cancelManual"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignRight="@+id/wednesday"
+            android:layout_alignEnd="@+id/wednesday" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:id="@+id/nextManual"
+            android:layout_alignTop="@+id/cancelManual"
+            android:layout_toRightOf="@+id/cancelManual"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:onClick="Next"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="from: "
+            android:id="@+id/textView2"
+            android:layout_below="@+id/eventManualName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="45dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tvTime"
+            android:layout_toLeftOf="@+id/btnChangeTime"
+            android:layout_alignTop="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2"
+            android:layout_toRightOf="@+id/textView2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change"
+            android:id="@+id/btnChangeTime"
+            android:layout_alignBottom="@+id/tvTime"
+            android:layout_centerHorizontal="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="to:"
+            android:id="@+id/textView6"
+            android:layout_below="@+id/textView2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="36dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/tvTime2"
+            android:layout_alignTop="@+id/textView6"
+            android:layout_toLeftOf="@+id/wednesday"
+            android:layout_toRightOf="@+id/textView2"
+            android:layout_toEndOf="@+id/textView2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="change"
+            android:id="@+id/btnChangeTime2"
+            android:layout_alignBottom="@+id/tvTime2"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+</LinearLayout>

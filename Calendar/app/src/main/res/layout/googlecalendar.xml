@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
+    >
+
+
+    <TextView
+
+
+        android:layout_width="fill_parent"
+
+
+        android:layout_height="wrap_content"
+
+
+        android:text="Select an event from your calendar"
+
+
+        android:gravity="center"
+
+
+        android:padding="10dip"
+        android:id="@+id/textView" />
+
+
+    <TextView
+
+
+        android:id="@+id/data"
+
+
+        android:layout_width="fill_parent"
+
+
+        android:layout_height="wrap_content"
+
+
+        android:gravity="center"
+
+
+        android:padding="10dip"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+
+    <LinearLayout
+
+
+        android:layout_width="fill_parent"
+
+
+        android:layout_height="wrap_content"
+
+
+        android:orientation="horizontal"
+
+
+        android:gravity="center"
+        android:id="@+id/linearLayout">
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/next"
+        android:text="Next"
+        android:padding="10dip"
+        android:layout_below="@+id/data"
+        android:layout_alignRight="@+id/data"
+        android:layout_alignEnd="@+id/data"
+        android:layout_marginRight="56dp"
+        android:layout_marginEnd="56dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/previous"
+        android:text="Prev"
+        android:padding="10dip"
+        android:layout_below="@+id/data"
+        android:layout_toLeftOf="@+id/next"
+        android:layout_toStartOf="@+id/next"
+        android:layout_marginRight="52dp"
+        android:layout_marginEnd="52dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select"
+        android:id="@+id/select"
+        android:layout_below="@+id/next"
+        android:layout_centerHorizontal="true"
+        android:onClick="display"/>
+
+</RelativeLayout>
